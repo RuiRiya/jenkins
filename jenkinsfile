@@ -3,11 +3,7 @@ pipeline {
 
 stages {
 
-        stage('clone application'){
-            steps{
-                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/himanshu44sharma/perfume-store.git'
-            }
-        }
+       
         stage('print versions') {
             steps {
                 sh 'npm cache verify'
