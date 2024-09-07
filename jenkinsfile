@@ -18,7 +18,7 @@ stages {
 
         stage('Install') {
             steps {
-                sh 'npm init'
+                sh 'npm init -y'
                 sh 'npm install'
             }
         }
