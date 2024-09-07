@@ -1,11 +1,7 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs '22.8.0'
-    }
-
-    stages {
+stages {
         stage('print versions') {
             steps {
                 sh 'npm --version'
