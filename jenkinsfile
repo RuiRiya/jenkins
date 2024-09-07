@@ -2,9 +2,14 @@ pipeline {
     agent any
 
 stages {
+
+        stage('clone application'){
+            steps{
+                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/himanshu44sharma/perfume-store.git'
+            }
+        }
         stage('print versions') {
             steps {
-                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/himanshu44sharma/perfume-store.git'
                 sh 'npm cache verify'
                 sh 'npm --version'
                 sh 'node --version'
