@@ -12,6 +12,7 @@ stages {
 
         stage('Install') {
             steps {
+                sh 'npm init'
                 sh 'npm install'
             }
         }
